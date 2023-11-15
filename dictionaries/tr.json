@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "about": "Hakkında"
+  },
+  "page": {
+    "home": {
+      "title": "Hoş Geldiniz",
+      "description": "Merhabalar"
+    }
+  }
+}
