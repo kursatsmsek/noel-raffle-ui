@@ -1,5 +1,8 @@
 {
   "navigation": {
+    "giftRaffle": "Hediye Çekilişi",
+    "sponsors": "Sponsorlar",
+    "statistics": "Site Verileri",
     "home": "Ana Sayfa",
     "about": "Hakkında"
   },

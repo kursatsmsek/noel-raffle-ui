@@ -1,0 +1,16 @@
+.drawerContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e4686a;
+  color: white;
+  font-weight: bold;
+}
+
+.sockImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}

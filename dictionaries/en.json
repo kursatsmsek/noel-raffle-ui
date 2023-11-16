@@ -1,5 +1,8 @@
 {
   "navigation": {
+    "giftRaffle": "Gift Raffle",
+    "sponsors": "Sponsors",
+    "statistics": "Site Statistics",
     "home": "Home",
     "about": "About"
   },
