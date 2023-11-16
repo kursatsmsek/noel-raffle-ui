@@ -1,0 +1,16 @@
+.tableContainer {
+  width: 100%;
+  background-color: rgba(236, 78, 78, 0.218);
+  padding: 2%;
+  border-radius: 6px;
+  margin-bottom: 1%;
+  font-size: small;
+}
+
+.row {
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

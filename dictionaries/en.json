@@ -7,9 +7,15 @@
     "about": "About"
   },
   "page": {
-    "home": {
-      "title": "Welcome to NextJs i18n",
-      "description": "Hello"
+    "noel": {
+      "title": "Noel Raffle",
+      "slogan": "New Year is a fresh start. It's time to leave the past behind and step into tomorrow filled with new hopes. Look forward with optimism, explore the beauties of life, and share them with your loved ones. May the New Year bring you happiness, health, and success! 🌟 🎉",
+      "description": "Add the participants and complete the draw. We will generate random pairings for you and send you the participant for whom you need to receive a gift to your email address. Happy New Year in advance! ✨"
+    },
+    "place": {
+      "startRaffle": "Start Raffle",
+      "addParticipants": "Add Participants",
+      "completeRaffle": "Complete Raffle"
     }
   }
 }

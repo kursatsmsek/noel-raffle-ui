@@ -7,9 +7,15 @@
     "about": "Hakkında"
   },
   "page": {
-    "home": {
-      "title": "Hoş Geldiniz",
-      "description": "Merhabalar"
+    "noel": {
+      "title": "Yılbası Çekilisi",
+      "slogan": "Yeni yıl, taptaze bir başlangıçtır. Geçmişi geride bırakıp yeni umutlarla dolu yarına adım atma vakti gelmiştir. İleriye umutla bakın, hayatın güzelliklerini keşfedin ve sevdiklerinizle paylaşın. Yeni yılsize mutluluk, sağlık ve başarı getirsin! 🌟 🎉",
+      "description": "Katılımcıları ekleyin ve çekilişi tamamlayın. Sizin için rastgele eşleşmeler yapıp e-posta adresinize hediye almanız gereken katılımcıyı gönderelim. Şimdiden mutlu yıllar. ✨"
+    },
+    "place": {
+      "startRaffle": "Çekilişi Başlat",
+      "addParticipants": "Katılımcıları Ekle",
+      "completeRaffle": "Çekilişi Tamamla"
     }
   }
 }
