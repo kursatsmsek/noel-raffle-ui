@@ -12,7 +12,7 @@ import { FaRegEdit } from "react-icons/fa";
 import { Button, Grid, TextField } from "@mui/material";
 import EditUser from "../edit-user";
 
-function Row({ user, raffleData, setRaffleData }) {
+function Row({ user, raffleData, setRaffleData, page }) {
   const [open, setOpen] = useState(false);
 
   const [userData, setUserData] = useState({
@@ -85,8 +85,8 @@ function Row({ user, raffleData, setRaffleData }) {
                 <Grid item xs={2} sm={4} md={6}>
                   <TextField
                     size="small"
-                    label="Ad"
-                    placeholder="Katılımcı Adı"
+                    label={page.place.name}
+                    placeholder={page.place.participantNamePlaceholder}
                     variant="outlined"
                     color="error"
                     name="name"
@@ -101,8 +101,8 @@ function Row({ user, raffleData, setRaffleData }) {
                 <Grid item xs={2} sm={4} md={6}>
                   <TextField
                     size="small"
-                    label="Soyad"
-                    placeholder="Katılımcı Soyadı"
+                    label={page.place.surname}
+                    placeholder={page.place.participantSurnamePlaceholder}
                     variant="outlined"
                     color="error"
                     name="surname"
@@ -117,8 +117,8 @@ function Row({ user, raffleData, setRaffleData }) {
                 <Grid item xs={2} sm={4} md={6}>
                   <TextField
                     size="small"
-                    label="E-posta"
-                    placeholder="Katılımcı E-postası"
+                    label={page.place.email}
+                    placeholder={page.place.participantEmailPlaceholder}
                     variant="outlined"
                     color="error"
                     name="email"
@@ -140,7 +140,7 @@ function Row({ user, raffleData, setRaffleData }) {
                     variant="contained"
                     type="submit"
                   >
-                    Kaydet
+                    {page.button.save}
                   </Button>
                 </Grid>
                 <Grid item xs={1} sm={2} md={2}>
@@ -152,7 +152,7 @@ function Row({ user, raffleData, setRaffleData }) {
                     variant="contained"
                     onClick={deleteUser}
                   >
-                    Sil
+                    {page.button.delete}
                   </Button>
                 </Grid>
               </Grid>
@@ -164,17 +164,17 @@ function Row({ user, raffleData, setRaffleData }) {
   );
 }
 
-function UserTable({ raffleData, setRaffleData }) {
+function UserTable({ raffleData, setRaffleData, page }) {
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 260 }}>
         <Table stickyHeader aria-label="collapsible table">
           <TableHead>
             <TableRow>
-              <TableCell>Düzenle</TableCell>
-              <TableCell>Ad</TableCell>
-              <TableCell>Soyad</TableCell>
-              <TableCell>E-posta</TableCell>
+              <TableCell>{page.button.edit}</TableCell>
+              <TableCell>{page.place.name}</TableCell>
+              <TableCell>{page.place.surname}</TableCell>
+              <TableCell>{page.place.email}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -184,6 +184,7 @@ function UserTable({ raffleData, setRaffleData }) {
                 user={user}
                 raffleData={raffleData}
                 setRaffleData={setRaffleData}
+                page={page}
               />
             ))}
           </TableBody>

@@ -13,7 +13,13 @@ import {
 } from "@mui/material";
 import FatherChristmas from "@/assets/logo2.png";
 
-function FirstStep({ raffleData, setRaffleData, handleBack, handleNext }) {
+function FirstStep({
+  raffleData,
+  setRaffleData,
+  handleBack,
+  handleNext,
+  page,
+}) {
   return (
     <form style={{ width: "100%" }} onSubmit={handleNext}>
       <Grid container rowSpacing={2} columnSpacing={{ xs: 6, sm: 12, md: 18 }}>
@@ -28,8 +34,8 @@ function FirstStep({ raffleData, setRaffleData, handleBack, handleNext }) {
         <Grid item md={18} width={"100%"}>
           <TextField
             id="outlined-basic"
-            label="Çekiliş Başlığı"
-            placeholder="Ör: Alice'in IK Takımı @Şirket"
+            label={page.place.raffleTitle}
+            placeholder={page.place.raffleTitlePlaceholder}
             variant="outlined"
             fullWidth
             required
@@ -44,46 +50,46 @@ function FirstStep({ raffleData, setRaffleData, handleBack, handleNext }) {
         <Grid item md={18} width={"100%"}>
           <FormControl fullWidth>
             <InputLabel color="error" id="demo-simple-select-helper-label">
-              Çekiliş Grubu Seçin
+              {page.place.chooseRaffleGroup}
             </InputLabel>
             <Select
               color="error"
               labelId="demo-simple-select-helper-label"
               id="demo-simple-select-helper"
               value={raffleData.group}
-              label="Çekiliş Grubu Seçin"
+              label={page.place.chooseRaffleGroup}
               onChange={(e) =>
                 setRaffleData({ ...raffleData, group: e.target.value })
               }
             >
-              <MenuItem value={10}>Ekip - Şirket</MenuItem>
-              <MenuItem value={20}>Arkadaş - Sınıf Çekilişi</MenuItem>
-              <MenuItem value={30}>Aile - Akraba Çekilişi</MenuItem>
-              <MenuItem value={40}>Diğer</MenuItem>
+              <MenuItem value={10}>{page.place.teamCompany}</MenuItem>
+              <MenuItem value={20}>{page.place.friendsClassmates} </MenuItem>
+              <MenuItem value={30}>{page.place.family}</MenuItem>
+              <MenuItem value={40}>{page.place.other}</MenuItem>
             </Select>
           </FormControl>
         </Grid>
         <Grid item md={18} width={"100%"}>
           <FormControl fullWidth>
             <InputLabel color="error" id="demo-simple-select-helper-label">
-              Sektör Seçin
+              {page.place.chooseSector}
             </InputLabel>
             <Select
               color="error"
               labelId="demo-simple-select-helper-label"
               id="demo-simple-select-helper"
               value={raffleData.sector}
-              label="Sektör Seçin"
+              label={page.place.chooseSector}
               onChange={(e) =>
                 setRaffleData({ ...raffleData, sector: e.target.value })
               }
             >
-              <MenuItem value={10}>Teknoloji</MenuItem>
-              <MenuItem value={20}>Eğitim</MenuItem>
-              <MenuItem value={30}>Gıda</MenuItem>
-              <MenuItem value={40}>Sağlık</MenuItem>
-              <MenuItem value={50}>Spor</MenuItem>
-              <MenuItem value={60}>Diğer</MenuItem>
+              <MenuItem value={10}>{page.place.technology}</MenuItem>
+              <MenuItem value={20}>{page.place.education}</MenuItem>
+              <MenuItem value={30}>{page.place.food}</MenuItem>
+              <MenuItem value={40}>{page.place.health}</MenuItem>
+              <MenuItem value={50}>{page.place.sport}</MenuItem>
+              <MenuItem value={60}>{page.place.other}</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -96,12 +102,12 @@ function FirstStep({ raffleData, setRaffleData, handleBack, handleNext }) {
               sx={{ mr: 1 }}
               variant="outlined"
             >
-              Geri
+              {page.button.back}
             </Button>
             <Box sx={{ flex: "1 1 auto" }} />
 
             <Button type="submit" color="error" variant="outlined">
-              İleri
+              {page.button.next}
             </Button>
           </Box>
         </Grid>

@@ -5,7 +5,13 @@ import styles from "./styles.module.css";
 import { v4 as uuidv4 } from "uuid";
 import { isEmailAvailable } from "@/util";
 
-function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
+function SecondStep({
+  raffleData,
+  setRaffleData,
+  handleBack,
+  handleNext,
+  page,
+}) {
   const emptyFormData = {
     name: "",
     surname: "",
@@ -44,7 +50,7 @@ function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
 
   const submitNext = () => {
     if (raffleData.participants.length < 3) {
-      setFeedback("En az 3 kişi ekleyin");
+      setFeedback(page.place.minimumParticipants);
       setErrorMessageShow(true);
       return;
     }
@@ -62,18 +68,17 @@ function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
         <Grid item xs={4} sm={8} md={12}>
           {lastAdded !== "" ? (
             <div className={styles.desc}>
-              <b> {lastAdded} </b> başarıyla eklendi; Sıradaki katılımcıyı
-              ekleyin. 🎅🏻
+              <b> {lastAdded} </b> {page.place.participantAdded}
             </div>
           ) : (
-            <div className={styles.desc}>İlk katılımcıyı ekleyin. 🎅🏻</div>
+            <div className={styles.desc}>{page.place.addFirstParticipant}</div>
           )}
         </Grid>
         <Grid item xs={4} sm={8} md={12}>
           <TextField
             id="outlined-basic"
-            label="Ad"
-            placeholder="Katılımcı Adı"
+            label={page.place.name}
+            placeholder={page.place.participantNamePlaceholder}
             variant="outlined"
             required
             color="error"
@@ -86,8 +91,8 @@ function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
         <Grid item xs={4} sm={8} md={12}>
           <TextField
             id="outlined-basic"
-            label="Soyad"
-            placeholder="Katılımcı Soyadı"
+            label={page.place.surname}
+            placeholder={page.place.participantSurnamePlaceholder}
             variant="outlined"
             required
             color="error"
@@ -102,17 +107,15 @@ function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
         <Grid item xs={4} sm={8} md={12}>
           <TextField
             id="outlined-basic"
-            label="E-posta"
-            placeholder="Katılımcı E-postası"
+            label={page.place.email}
+            placeholder={page.place.participantEmailPlaceholder}
             variant="outlined"
             fullWidth
             required
             type="email"
             color="error"
             name="title"
-            helperText={
-              emailError && "Bu e-postayı bu çekilişte zaten kullandınız."
-            }
+            helperText={emailError && page.place.emailAlreadyTaken}
             value={userData.email}
             onChange={(e) =>
               setUserData({ ...userData, email: e.target.value })
@@ -127,7 +130,7 @@ function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
             variant="contained"
             type="submit"
           >
-            Ekle
+            {page.button.add}
           </Button>
         </Grid>
         {errorMessageShow && (
@@ -136,10 +139,7 @@ function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
           </Grid>
         )}
         <Grid item xs={4} sm={8} md={12}>
-          <div className={styles.desc}>
-            Yanlış eklerseniz endişelenmeyin! Bir sonraki adımda katılımcıları
-            <b> düzenleyip & silebileceksiniz.</b> ✨
-          </div>
+          <div className={styles.desc}>{page.place.dontWorry}</div>
         </Grid>
         <Grid item xs={4} sm={8} md={12} width={"100%"}>
           <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
@@ -149,12 +149,12 @@ function SecondStep({ raffleData, setRaffleData, handleBack, handleNext }) {
               sx={{ mr: 1 }}
               variant="outlined"
             >
-              Geri
+              {page.button.back}
             </Button>
             <Box sx={{ flex: "1 1 auto" }} />
 
             <Button onClick={submitNext} color="error" variant="outlined">
-              İleri
+              {page.button.next}
             </Button>
           </Box>
         </Grid>

@@ -15,7 +15,45 @@
     "place": {
       "startRaffle": "Çekilişi Başlat",
       "addParticipants": "Katılımcıları Ekle",
-      "completeRaffle": "Çekilişi Tamamla"
+      "completeRaffle": "Çekilişi Tamamla",
+      "raffleTitle": "Çekiliş Başlığı",
+      "raffleTitlePlaceholder": "Ör: Alice'in IK Takımı @Şirket",
+      "chooseRaffleGroup": "Çekiliş Grubu Seçin",
+      "teamCompany": "Ekip - Şirket",
+      "friendsClassmates": "Arkadaş - Sınıf",
+      "family": "Aile - Akraba",
+      "other": "Diğer",
+      "chooseSector": "Sektör Seçin",
+      "technology": "Teknoloji",
+      "education": "Eğitim",
+      "food": "Gıda",
+      "health": "Sağlık",
+      "sport": "Spor",
+      "minimumParticipants": "En az 3 kişi ekleyin",
+      "participantAdded": "başarıyla eklendi; Sıradaki katılımcıyı ekleyin. 🎅🏻",
+      "addFirstParticipant": "İlk katılımcıyı ekleyin. 🎅🏻",
+      "name": "Ad",
+      "participantNamePlaceholder": "Katılımcı Adı",
+      "surname": "Soyad",
+      "participantSurnamePlaceholder": "Katılımcı Soyadı",
+      "email": "E-posta",
+      "participantEmailPlaceholder": "Katılımcı E-postası",
+      "emailAlreadyTaken": "Bu e-postayı bu çekilişte zaten kullandınız.",
+      "dontWorry": "Yanlış eklerseniz endişelenmeyin! Bir sonraki adımda katılımcıları düzenleyip & silebileceksiniz. ✨",
+      "maximumParticipant": "Katılımcı sayısı 500'ü geçemez",
+      "somethingWentWrong": "Bir hata oluştu",
+      "checkAndCompleteRaffle": "Katılımcı listenizi kontrol edin ve çekilişi yapın. 🎅🏻",
+      "confidentialityAgreement": "Gizlilik Sözleşmesi",
+      "userAgreement": "Kullanıcı Sözleşmesi",
+      "readAndAccept": "okudum ve kabul ediyorum."
+    },
+    "button": {
+      "back": "Geri",
+      "next": "İleri",
+      "add": "Ekle",
+      "edit": "Düzenle",
+      "save": "Kaydet",
+      "delete": "Sil"
     }
   }
 }

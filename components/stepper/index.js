@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import Button from "@mui/material/Button";
 import FirstStep from "../steps/first-step";
 import SecondStep from "../steps/second-step";
 import ThirdStep from "../steps/third-step";
@@ -54,6 +53,7 @@ function RaffleStepper({ page }) {
           setRaffleData={setRaffleData}
           handleBack={handleBack}
           handleNext={handleNext}
+          page={page}
         />
       )}
       {activeStep === 1 && (
@@ -62,6 +62,7 @@ function RaffleStepper({ page }) {
           setRaffleData={setRaffleData}
           handleBack={handleBack}
           handleNext={handleNext}
+          page={page}
         />
       )}
       {activeStep === 2 && (
@@ -70,6 +71,7 @@ function RaffleStepper({ page }) {
           setRaffleData={setRaffleData}
           handleBack={handleBack}
           handleNext={handleNext}
+          page={page}
         />
       )}
       {activeStep === 3 && <SuccessStep handleReset={handleReset} />}

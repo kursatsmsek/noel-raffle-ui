@@ -11,7 +11,13 @@ import {
 import UserTable from "@/components/user-table";
 import Link from "next/link";
 
-function ThirdStep({ raffleData, setRaffleData, handleBack, handleNext }) {
+function ThirdStep({
+  raffleData,
+  setRaffleData,
+  handleBack,
+  handleNext,
+  page,
+}) {
   const [checkedBox, setCheckedBox] = useState(false);
 
   const [errorMessageShow, setErrorMessageShow] = useState(false);
@@ -22,7 +28,7 @@ function ThirdStep({ raffleData, setRaffleData, handleBack, handleNext }) {
     e.preventDefault();
     try {
       if (raffleData.participants.length > 500) {
-        setFeedback("Katılımcı sayısı 500'ü geçemez");
+        setFeedback(page.place.maximumParticipant);
         setErrorMessageShow(true);
         return;
       }
@@ -53,19 +59,21 @@ function ThirdStep({ raffleData, setRaffleData, handleBack, handleNext }) {
         setErrorMessageShow(true);
       }
     } catch (error) {
-      console.error("İstek sırasında bir hata oluştu:", error);
+      console.error(page.place.somethingWentWrong, error);
     }
   };
 
   return (
     <Grid container rowSpacing={2} columns={{ xs: 4, sm: 8, md: 12 }}>
       <Grid item xs={4} sm={8} md={12}>
-        <div className={styles.desc}>
-          Katılımcı listenizi kontrol edin ve çekilişi yapın. 🎅🏻
-        </div>
+        <div className={styles.desc}>{page.place.checkAndCompleteRaffle}</div>
       </Grid>
       <Grid item xs={4} sm={8} md={12}>
-        <UserTable raffleData={raffleData} setRaffleData={setRaffleData} />
+        <UserTable
+          raffleData={raffleData}
+          setRaffleData={setRaffleData}
+          page={page}
+        />
       </Grid>
 
       <Grid item xs={4} sm={8} md={12}>
@@ -78,9 +86,9 @@ function ThirdStep({ raffleData, setRaffleData, handleBack, handleNext }) {
             onChange={(e) => setCheckedBox(e.target.checked)}
           />
           <span>
-            <Link href={"#"}>Gizlilik Sözleşmesini </Link> ve
-            <Link href={"#"}> Kullanıcı Sözleşmesini </Link> okudum ve kabul
-            ediyorum.
+            <Link href={"#"}>{page.place.confidentialityAgreement} </Link> -
+            <Link href={"#"}> {page.place.userAgreement} </Link>{" "}
+            {page.place.readAndAccept}
           </span>
         </div>
       </Grid>
@@ -97,7 +105,7 @@ function ThirdStep({ raffleData, setRaffleData, handleBack, handleNext }) {
             sx={{ mr: 1 }}
             variant="outlined"
           >
-            Geri
+            {page.button.back}
           </Button>
           <Box sx={{ flex: "1 1 auto" }} />
           <Button
@@ -107,7 +115,7 @@ function ThirdStep({ raffleData, setRaffleData, handleBack, handleNext }) {
             variant="contained"
             disabled={!checkedBox}
           >
-            Çekilişi Yap
+            {page.place.completeRaffle}
           </Button>
         </Box>
       </Grid>

@@ -15,7 +15,45 @@
     "place": {
       "startRaffle": "Start Raffle",
       "addParticipants": "Add Participants",
-      "completeRaffle": "Complete Raffle"
+      "completeRaffle": "Complete Raffle",
+      "raffleTitle": "Raffle Title",
+      "raffleTitlePlaceholder": "E.g.: Alice's HR Team @Company",
+      "chooseRaffleGroup": "Choose Raffle Group",
+      "teamCompany": "Team - Company",
+      "friendsClassmates": "Friends - Class",
+      "family": "Family - Relatives",
+      "other": "Other",
+      "chooseSector": "Choose Sector",
+      "technology": "Technology",
+      "education": "Education",
+      "food": "Food",
+      "health": "Health",
+      "sport": "Sports",
+      "minimumParticipants": "Add at least 3 participants",
+      "participantAdded": "Successfully added; Add the next participant. 🎅🏻",
+      "addFirstParticipant": "Add the first participant. 🎅🏻",
+      "name": "Name",
+      "participantNamePlaceholder": "Participant Name",
+      "surname": "Surname",
+      "participantSurnamePlaceholder": "Participant Surname",
+      "email": "Email",
+      "participantEmailPlaceholder": "Participant Email",
+      "emailAlreadyTaken": "You've already used this email for this raffle.",
+      "dontWorry": "Don't worry if you make a mistake! In the next step, you can edit and delete participants. ✨",
+      "maximumParticipant": "The number of participants cannot exceed 500",
+      "somethingWentWrong": "Something went wrong",
+      "checkAndCompleteRaffle": "Check your participant list and complete the raffle. 🎅🏻",
+      "confidentialityAgreement": "Confidentiality Agreement",
+      "userAgreement": "User Agreement",
+      "readAndAccept": "I have read and accept."
+    },
+    "button": {
+      "back": "Back",
+      "next": "Next",
+      "add": "Add",
+      "edit": "Edit",
+      "save": "Save",
+      "delete": "Delete"
     }
   }
 }
