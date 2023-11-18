@@ -1,8 +1,8 @@
-import HomeContainer from "@/containers/home-container";
+import GiftRaffleContainer from "@/containers/gift-raffle-container";
 import { getDictionary } from "@/lib/dictionary";
 
 export default async function GiftRaffle({ params: { lang } }) {
   const { page } = await getDictionary(lang);
 
-  return <HomeContainer page={page} />;
+  return <GiftRaffleContainer page={page} />;
 }

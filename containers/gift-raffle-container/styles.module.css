@@ -1,0 +1,68 @@
+.title {
+  font-size: 5rem;
+  padding: 4px;
+}
+
+.slogan {
+  width: 90%;
+  font-weight: 300;
+  font-size: medium;
+  margin-bottom: 1rem;
+  padding: 4px;
+}
+
+.desc {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.218);
+  padding: 2%;
+  border-radius: 6px;
+  margin-bottom: 1%;
+}
+
+.raffle {
+  background-color: rgba(255, 255, 255, 0.218);
+  border-radius: 10px;
+  padding: 2%;
+  min-height: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+.box {
+  width: 100%;
+  padding: 30px;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .box {
+    padding: 10px;
+  }
+
+  .noelRaffle {
+    font-size: 3.4rem;
+  }
+
+  .desc {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.218);
+    padding: 2%;
+    font-size: small;
+    border-radius: 6px;
+    margin-bottom: 1%;
+  }
+
+  .slogan {
+    width: 100%;
+    font-weight: 300;
+    font-size: small;
+    margin-bottom: 1rem;
+    padding: 4px;
+  }
+}
