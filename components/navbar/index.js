@@ -6,6 +6,8 @@ import TemporaryDrawer from "../drawer";
 import { getDictionary } from "@/lib/dictionary";
 import { GrLanguage } from "react-icons/gr";
 import { IoLanguageSharp } from "react-icons/io5";
+import { usePathname } from "next/navigation";
+import LocaleSwitcher from "./locale-switcher";
 
 async function Navbar({ lang }) {
   const { navigation } = await getDictionary(lang);
@@ -25,16 +27,7 @@ async function Navbar({ lang }) {
         <Link href="/login" className={styles.linkButton}>
           {navigation.statistics}
         </Link>
-        <Link
-          href={lang === "tr" ? "en" : "tr"}
-          style={{ backgroundColor: "rgb(249, 117, 94)" }}
-          className={styles.linkButton}
-        >
-          <IoLanguageSharp />
-          <div style={{ marginLeft: "8px" }}>
-            {lang === "tr" ? "English" : "Türkçe"}
-          </div>
-        </Link>
+        <LocaleSwitcher lang={lang} />
       </div>
       <div className={styles.hamburgerMenu}>
         <TemporaryDrawer lang={lang} />
