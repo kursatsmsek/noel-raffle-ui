@@ -45,7 +45,8 @@
       "checkAndCompleteRaffle": "Katılımcı listenizi kontrol edin ve çekilişi yapın. 🎅🏻",
       "confidentialityAgreement": "Gizlilik Sözleşmesi",
       "userAgreement": "Kullanıcı Sözleşmesi",
-      "readAndAccept": "okudum ve kabul ediyorum."
+      "readAndAccept": "okudum ve kabul ediyorum.",
+      "successfullyMessage": "Çekiliş başarıyla tamamlandı. Lütfen e-postalarınızı kontrol edin."
     },
     "button": {
       "back": "Geri",
@@ -53,7 +54,8 @@
       "add": "Ekle",
       "edit": "Düzenle",
       "save": "Kaydet",
-      "delete": "Sil"
+      "delete": "Sil",
+      "newRaffle": "Yeni Çekiliş"
     }
   }
 }

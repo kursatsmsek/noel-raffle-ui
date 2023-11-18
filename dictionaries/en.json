@@ -45,7 +45,8 @@
       "checkAndCompleteRaffle": "Check your participant list and complete the raffle. 🎅🏻",
       "confidentialityAgreement": "Confidentiality Agreement",
       "userAgreement": "User Agreement",
-      "readAndAccept": "I have read and accept."
+      "readAndAccept": "I have read and accept.",
+      "successfullyMessage": "Raffle successfully completed. Please check your emails."
     },
     "button": {
       "back": "Back",
@@ -53,7 +54,8 @@
       "add": "Add",
       "edit": "Edit",
       "save": "Save",
-      "delete": "Delete"
+      "delete": "Delete",
+      "newRaffle": "New Raffle"
     }
   }
 }

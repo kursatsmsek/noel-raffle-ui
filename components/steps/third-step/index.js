@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import {
-  Alert,
-  Box,
-  Button,
-  Checkbox,
-  FormControlLabel,
-  Grid,
-} from "@mui/material";
+import { Alert, Box, Button, Checkbox, Grid, Snackbar } from "@mui/material";
 import UserTable from "@/components/user-table";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { completeNoelRaffle } from "@/util/apiCalls";
 
 function ThirdStep({
   raffleData,
@@ -18,7 +14,11 @@ function ThirdStep({
   handleNext,
   page,
 }) {
+  const { lang } = useParams();
+
   const [checkedBox, setCheckedBox] = useState(false);
+
+  const [sWWOpen, setSWWOpen] = useState(false); // something went wrong open ?
 
   const [errorMessageShow, setErrorMessageShow] = useState(false);
 
@@ -32,19 +32,10 @@ function ThirdStep({
         setErrorMessageShow(true);
         return;
       }
-
       raffleData.participants.forEach((participant) => delete participant.id);
-      const res = await fetch("http://localhost:8080/noel/raffle", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept-Language": "tr",
-        },
-        body: JSON.stringify(raffleData),
-      });
+      const res = await completeNoelRaffle(lang, raffleData);
 
       if (res.ok) {
-        const responseText = await res.text();
         setErrorMessageShow(false);
         setRaffleData({
           title: "",
@@ -60,6 +51,7 @@ function ThirdStep({
       }
     } catch (error) {
       console.error(page.place.somethingWentWrong, error);
+      setSWWOpen(true);
     }
   };
 
@@ -119,6 +111,20 @@ function ThirdStep({
           </Button>
         </Box>
       </Grid>
+      <Snackbar
+        open={sWWOpen}
+        autoHideDuration={2000}
+        onClose={() => setSWWOpen(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setSWWOpen(false)}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          {page.place.somethingWentWrong}
+        </Alert>
+      </Snackbar>
     </Grid>
   );
 }

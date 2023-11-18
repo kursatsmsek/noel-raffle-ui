@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Cookie from "@/assets/cookie.png";
 
-function SuccessStep({ handleReset }) {
+function SuccessStep({ handleReset, page }) {
   return (
     <form onSubmit={handleReset}>
       <Grid container rowSpacing={2} columnSpacing={{ xs: 6, sm: 12, md: 18 }}>
@@ -16,13 +16,11 @@ function SuccessStep({ handleReset }) {
           <Image width={250} src={Cookie} alt="cookie-man" />
         </Grid>
         <Grid item md={18} width={"100%"}>
-          <Alert severity="success">
-            Çekiliş başarıyla tamamlandı. Lütfen e-postalarınızı kontrol edin.
-          </Alert>
+          <Alert severity="success">{page.place.successfullyMessage}</Alert>
         </Grid>
         <Grid item md={18} width={"100%"}>
           <Button fullWidth type="submit" color="error" variant="outlined">
-            Yeni Çekiliş
+            {page.button.newRaffle}
           </Button>
         </Grid>
       </Grid>

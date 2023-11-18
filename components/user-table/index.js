@@ -10,7 +10,6 @@ import IconButton from "@mui/material/IconButton";
 import Collapse from "@mui/material/Collapse";
 import { FaRegEdit } from "react-icons/fa";
 import { Button, Grid, TextField } from "@mui/material";
-import EditUser from "../edit-user";
 
 function Row({ user, raffleData, setRaffleData, page }) {
   const [open, setOpen] = useState(false);

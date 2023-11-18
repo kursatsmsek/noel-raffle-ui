@@ -74,7 +74,9 @@ function RaffleStepper({ page }) {
           page={page}
         />
       )}
-      {activeStep === 3 && <SuccessStep handleReset={handleReset} />}
+      {activeStep === 3 && (
+        <SuccessStep handleReset={handleReset} page={page} />
+      )}
     </Box>
   );
 }
