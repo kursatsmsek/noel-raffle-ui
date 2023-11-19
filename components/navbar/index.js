@@ -9,7 +9,7 @@ import { IoLanguageSharp } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 import LocaleSwitcher from "./locale-switcher";
 
-async function Navbar({ lang }) {
+async function Navbar({ lang, isGiftRaffle }) {
   const { navigation } = await getDictionary(lang);
 
   return (
@@ -18,8 +18,11 @@ async function Navbar({ lang }) {
         <Image width={110} src={Logo} alt="merry-christmas" />
       </div>
       <div className={styles.buttonsDiv}>
-        <Link href={`/${lang}`} className={styles.linkButton}>
-          {navigation.giftRaffle}
+        <Link
+          href={isGiftRaffle ? `/${lang}` : `/${lang}/gift-raffle`}
+          className={styles.linkButton}
+        >
+          {isGiftRaffle ? navigation.noelRaffle : navigation.giftRaffle}
         </Link>
         <Link href="/login" className={styles.linkButton}>
           {navigation.sponsors}
