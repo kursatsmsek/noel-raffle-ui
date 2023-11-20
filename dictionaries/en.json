@@ -13,6 +13,9 @@
       "slogan": "New Year is a fresh start. It's time to leave the past behind and step into tomorrow filled with new hopes. Look forward with optimism, explore the beauties of life, and share them with your loved ones. May the New Year bring you happiness, health, and success! 🌟 🎉",
       "description": "Add the participants and complete the draw. We will generate random pairings for you and send you the participant for whom you need to receive a gift to your email address. Happy New Year in advance! ✨"
     },
+    "gift": {
+      "title": "Gift Raffle"
+    },
     "place": {
       "startRaffle": "Start Raffle",
       "addParticipants": "Add Participants",
@@ -47,7 +50,11 @@
       "confidentialityAgreement": "Confidentiality Agreement",
       "userAgreement": "User Agreement",
       "readAndAccept": "I have read and accept.",
-      "successfullyMessage": "Raffle successfully completed. Please check your emails."
+      "successfullyMessage": "Raffle successfully completed. Please check your emails.",
+      "addFirstGift": "Add the first gift. 🎁",
+      "giftAdded": "successfully added; Add the next gift. ✨",
+      "dontWorryGift": "Don't worry if you make a mistake! In the last step, you can edit and delete gifts. ✨",
+      "minimumGifts": "Add at least 1 gifts."
     },
     "button": {
       "back": "Back",

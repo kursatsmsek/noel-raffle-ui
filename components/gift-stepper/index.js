@@ -8,9 +8,10 @@ import FirstStep from "../steps/first-step";
 import SecondStep from "../steps/second-step";
 import ThirdStep from "../steps/third-step";
 import SuccessStep from "../success-step";
-import FatherChristmas from "@/assets/logo2.png";
+import GiftHand from "@/assets/gift-hand.png";
+import GiftAddStep from "../steps/gift-add-step";
 
-function RaffleStepper({ page }) {
+function GiftRaffleStepper({ page }) {
   const steps = [
     page.place.startRaffle,
     page.place.addParticipants,
@@ -23,7 +24,12 @@ function RaffleStepper({ page }) {
     group: "",
     sector: "",
     participants: "",
+    gifts: "",
   });
+
+  useEffect(() => {
+    console.log("GiftRaffle Data => ", raffleData);
+  }, [raffleData]);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -55,11 +61,11 @@ function RaffleStepper({ page }) {
           handleBack={handleBack}
           handleNext={handleNext}
           page={page}
-          imageSrc={FatherChristmas}
+          imageSrc={GiftHand}
         />
       )}
       {activeStep === 1 && (
-        <SecondStep
+        <GiftAddStep
           raffleData={raffleData}
           setRaffleData={setRaffleData}
           handleBack={handleBack}
@@ -68,7 +74,7 @@ function RaffleStepper({ page }) {
         />
       )}
       {activeStep === 2 && (
-        <ThirdStep
+        <SecondStep
           raffleData={raffleData}
           setRaffleData={setRaffleData}
           handleBack={handleBack}
@@ -77,10 +83,19 @@ function RaffleStepper({ page }) {
         />
       )}
       {activeStep === 3 && (
+        <ThirdStep
+          raffleData={raffleData}
+          setRaffleData={setRaffleData}
+          handleBack={handleBack}
+          handleNext={handleNext}
+          page={page}
+        />
+      )}
+      {activeStep === 4 && (
         <SuccessStep handleReset={handleReset} page={page} />
       )}
     </Box>
   );
 }
 
-export default RaffleStepper;
+export default GiftRaffleStepper;

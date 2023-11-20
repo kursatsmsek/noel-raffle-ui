@@ -19,6 +19,7 @@ function FirstStep({
   handleBack,
   handleNext,
   page,
+  imageSrc,
 }) {
   return (
     <form style={{ width: "100%" }} onSubmit={handleNext}>
@@ -29,7 +30,7 @@ function FirstStep({
           width={"100%"}
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <Image width={150} src={FatherChristmas} alt="father-christmas" />
+          <Image width={150} src={imageSrc} alt="father-christmas" />
         </Grid>
         <Grid item md={18} width={"100%"}>
           <TextField

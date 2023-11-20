@@ -13,6 +13,9 @@
       "slogan": "Yeni yıl, taptaze bir başlangıçtır. Geçmişi geride bırakıp yeni umutlarla dolu yarına adım atma vakti gelmiştir. İleriye umutla bakın, hayatın güzelliklerini keşfedin ve sevdiklerinizle paylaşın. Yeni yılsize mutluluk, sağlık ve başarı getirsin! 🌟 🎉",
       "description": "Katılımcıları ekleyin ve çekilişi tamamlayın. Sizin için rastgele eşleşmeler yapıp e-posta adresinize hediye almanız gereken katılımcıyı gönderelim. Şimdiden mutlu yıllar. ✨"
     },
+    "gift": {
+      "title": "Hediye Çekilisi"
+    },
     "place": {
       "startRaffle": "Çekilişi Başlat",
       "addParticipants": "Katılımcıları Ekle",
@@ -30,7 +33,7 @@
       "food": "Gıda",
       "health": "Sağlık",
       "sport": "Spor",
-      "minimumParticipants": "En az 3 kişi ekleyin",
+      "minimumParticipants": "En az 3 kişi ekleyin.",
       "participantAdded": "başarıyla eklendi; Sıradaki katılımcıyı ekleyin. 🎅🏻",
       "addFirstParticipant": "İlk katılımcıyı ekleyin. 🎅🏻",
       "name": "Ad",
@@ -47,7 +50,11 @@
       "confidentialityAgreement": "Gizlilik Sözleşmesi",
       "userAgreement": "Kullanıcı Sözleşmesi",
       "readAndAccept": "okudum ve kabul ediyorum.",
-      "successfullyMessage": "Çekiliş başarıyla tamamlandı. Lütfen e-postalarınızı kontrol edin."
+      "successfullyMessage": "Çekiliş başarıyla tamamlandı. Lütfen e-postalarınızı kontrol edin.",
+      "addFirstGift": "İlk hediyeyi ekleyin. 🎁",
+      "giftAdded": "başarıyla eklendi; Sıradaki hediyeyi ekleyin. ✨",
+      "dontWorryGift": "Yanlış eklerseniz endişelenmeyin! Son adımda hediyeleri düzenleyip & silebileceksiniz. ✨",
+      "minimumGifts": "En az 1 hediye ekleyin."
     },
     "button": {
       "back": "Geri",
