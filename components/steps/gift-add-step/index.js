@@ -36,6 +36,11 @@ function GiftAddStep({
 
   const submitUser = (e) => {
     e.preventDefault();
+    if (formData.giftCount < 1) {
+      setFeedback(page.place.minimumGiftCount);
+      setErrorMessageShow(true);
+      return;
+    }
     let gifts = raffleData.gifts || [];
     formData.giftId = uuidv4();
     gifts.push(formData);

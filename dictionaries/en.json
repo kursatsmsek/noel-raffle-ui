@@ -58,6 +58,7 @@
       "giftAdded": "successfully added; Add the next gift. ✨",
       "dontWorryGift": "Don't worry if you make a mistake! In the last step, you can edit and delete gifts. ✨",
       "minimumGifts": "Add at least 1 gifts.",
+      "minimumGiftCount": "The number of gifts cannot be less than 1.",
       "giftName": "Gift Name",
       "giftCount": "Gift Count",
       "addGifts": "Add Gifts",
