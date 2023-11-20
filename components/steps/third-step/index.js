@@ -28,6 +28,8 @@ function ThirdStep({
 
   const [checkedBox, setCheckedBox] = useState(false);
 
+  const [checkedBoxDisabled, setCheckedBoxDisabled] = useState(false);
+
   const [sWWOpen, setSWWOpen] = useState(false); // something went wrong open ?
 
   const [userTableOpen, setUserTableOpen] = useState(false);
@@ -37,6 +39,13 @@ function ThirdStep({
   const [errorMessageShow, setErrorMessageShow] = useState(false);
 
   const [feedback, setFeedback] = useState("");
+
+  useEffect(() => {
+    if (raffleData.participants.length < 3) {
+      setCheckedBox(false);
+      setCheckedBoxDisabled(true);
+    }
+  }, [raffleData]);
 
   const submitRaffle = async (e) => {
     e.preventDefault();
@@ -184,6 +193,7 @@ function ThirdStep({
             size="small"
             color="error"
             required
+            disabled={checkedBoxDisabled}
             checked={checkedBox}
             onChange={(e) => setCheckedBox(e.target.checked)}
           />
@@ -197,6 +207,11 @@ function ThirdStep({
       {errorMessageShow && (
         <Grid item xs={4} sm={8} md={12}>
           <Alert severity="error">{feedback}</Alert>
+        </Grid>
+      )}
+      {raffleData.participants.length < 3 && (
+        <Grid item xs={4} sm={8} md={12}>
+          <Alert severity="error">{page.place.minimumParticipants}</Alert>
         </Grid>
       )}
       <Grid item xs={4} sm={8} md={12} width={"100%"}>
