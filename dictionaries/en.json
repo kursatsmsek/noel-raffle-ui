@@ -54,7 +54,10 @@
       "addFirstGift": "Add the first gift. 🎁",
       "giftAdded": "successfully added; Add the next gift. ✨",
       "dontWorryGift": "Don't worry if you make a mistake! In the last step, you can edit and delete gifts. ✨",
-      "minimumGifts": "Add at least 1 gifts."
+      "minimumGifts": "Add at least 1 gifts.",
+      "giftName": "Gift Name",
+      "giftCount": "Gift Count",
+      "addGifts": "Add Gifts"
     },
     "button": {
       "back": "Back",

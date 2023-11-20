@@ -74,6 +74,7 @@ function RaffleStepper({ page }) {
           handleBack={handleBack}
           handleNext={handleNext}
           page={page}
+          withGiftEdit={false}
         />
       )}
       {activeStep === 3 && (

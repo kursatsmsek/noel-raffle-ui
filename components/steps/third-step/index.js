@@ -1,11 +1,20 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import { Alert, Box, Button, Checkbox, Grid, Snackbar } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  Checkbox,
+  Collapse,
+  Grid,
+  Snackbar,
+} from "@mui/material";
 import UserTable from "@/components/user-table";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { completeNoelRaffle } from "@/util/apiCalls";
+import GiftTable from "@/components/gift-table";
 
 function ThirdStep({
   raffleData,
@@ -13,12 +22,17 @@ function ThirdStep({
   handleBack,
   handleNext,
   page,
+  withGiftEdit,
 }) {
   const { lang } = useParams();
 
   const [checkedBox, setCheckedBox] = useState(false);
 
   const [sWWOpen, setSWWOpen] = useState(false); // something went wrong open ?
+
+  const [userTableOpen, setUserTableOpen] = useState(false);
+
+  const [giftTableOpen, setGiftTableOpen] = useState(false);
 
   const [errorMessageShow, setErrorMessageShow] = useState(false);
 
@@ -60,14 +74,110 @@ function ThirdStep({
       <Grid item xs={4} sm={8} md={12}>
         <div className={styles.desc}>{page.place.checkAndCompleteRaffle}</div>
       </Grid>
-      <Grid item xs={4} sm={8} md={12}>
-        <UserTable
-          raffleData={raffleData}
-          setRaffleData={setRaffleData}
-          page={page}
-        />
+      {withGiftEdit ? (
+        <>
+          <Grid item xs={4} sm={8} md={12}>
+            <Alert
+              style={{ cursor: "pointer" }}
+              severity="info"
+              onClick={() => {
+                setGiftTableOpen(false);
+                setUserTableOpen(!userTableOpen);
+              }}
+            >
+              Click to show or hide user table below
+            </Alert>
+          </Grid>
+          <Grid item xs={4} sm={8} md={12}>
+            <Collapse in={userTableOpen}>
+              <UserTable
+                raffleData={raffleData}
+                setRaffleData={setRaffleData}
+                page={page}
+              />
+            </Collapse>
+          </Grid>
+          {withGiftEdit && (
+            <Grid item xs={4} sm={8} md={12}>
+              <Alert
+                style={{ cursor: "pointer" }}
+                severity="info"
+                onClick={() => {
+                  setUserTableOpen(false);
+                  setGiftTableOpen(!giftTableOpen);
+                }}
+              >
+                Click to show or hide gift table below
+              </Alert>
+            </Grid>
+          )}
+          {withGiftEdit && (
+            <Grid item xs={4} sm={8} md={12}>
+              <Collapse in={giftTableOpen}>
+                <GiftTable
+                  raffleData={raffleData}
+                  setRaffleData={setRaffleData}
+                  page={page}
+                />
+              </Collapse>
+            </Grid>
+          )}
+        </>
+      ) : (
+        <Grid item xs={4} sm={8} md={12}>
+          <UserTable
+            raffleData={raffleData}
+            setRaffleData={setRaffleData}
+            page={page}
+          />
+        </Grid>
+      )}
+      {/* <Grid item xs={4} sm={8} md={12}>
+        <Alert
+          style={{ cursor: "pointer" }}
+          severity="info"
+          onClick={() => {
+            setGiftTableOpen(false);
+            setUserTableOpen(!userTableOpen);
+          }}
+        >
+          Click to show or hide user table below
+        </Alert>
       </Grid>
-
+      <Grid item xs={4} sm={8} md={12}>
+        <Collapse in={userTableOpen}>
+          <UserTable
+            raffleData={raffleData}
+            setRaffleData={setRaffleData}
+            page={page}
+          />
+        </Collapse>
+      </Grid>
+      {withGiftEdit && (
+        <Grid item xs={4} sm={8} md={12}>
+          <Alert
+            style={{ cursor: "pointer" }}
+            severity="info"
+            onClick={() => {
+              setUserTableOpen(false);
+              setGiftTableOpen(!giftTableOpen);
+            }}
+          >
+            Click to show or hide gift table below
+          </Alert>
+        </Grid>
+      )}
+      {withGiftEdit && (
+        <Grid item xs={4} sm={8} md={12}>
+          <Collapse in={giftTableOpen}>
+            <GiftTable
+              raffleData={raffleData}
+              setRaffleData={setRaffleData}
+              page={page}
+            />
+          </Collapse>
+        </Grid>
+      )} */}
       <Grid item xs={4} sm={8} md={12}>
         <div className={styles.desc} style={{ padding: "initial" }}>
           <Checkbox

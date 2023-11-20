@@ -54,7 +54,10 @@
       "addFirstGift": "İlk hediyeyi ekleyin. 🎁",
       "giftAdded": "başarıyla eklendi; Sıradaki hediyeyi ekleyin. ✨",
       "dontWorryGift": "Yanlış eklerseniz endişelenmeyin! Son adımda hediyeleri düzenleyip & silebileceksiniz. ✨",
-      "minimumGifts": "En az 1 hediye ekleyin."
+      "minimumGifts": "En az 1 hediye ekleyin.",
+      "giftName": "Hediye Adı",
+      "giftCount": "Hediye Sayısı",
+      "addGifts": "Hediyeleri Ekle"
     },
     "button": {
       "back": "Geri",

@@ -14,6 +14,7 @@ import GiftAddStep from "../steps/gift-add-step";
 function GiftRaffleStepper({ page }) {
   const steps = [
     page.place.startRaffle,
+    page.place.addGifts,
     page.place.addParticipants,
     page.place.completeRaffle,
   ];
@@ -89,6 +90,7 @@ function GiftRaffleStepper({ page }) {
           handleBack={handleBack}
           handleNext={handleNext}
           page={page}
+          withGiftEdit={true}
         />
       )}
       {activeStep === 4 && (

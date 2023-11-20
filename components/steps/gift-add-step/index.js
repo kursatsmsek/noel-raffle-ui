@@ -21,6 +21,7 @@ function GiftAddStep({
   page,
 }) {
   const emptyFormData = {
+    giftId: "",
     giftName: "",
     giftCount: 1,
   };
@@ -36,6 +37,7 @@ function GiftAddStep({
   const submitUser = (e) => {
     e.preventDefault();
     let gifts = raffleData.gifts || [];
+    formData.giftId = uuidv4();
     gifts.push(formData);
     setRaffleData((prevData) => {
       return { ...prevData, gifts: gifts };
@@ -72,12 +74,11 @@ function GiftAddStep({
         </Grid>
         <Grid item xs={4} sm={8} md={12}>
           <TextField
-            label={"Hediye Adı"}
-            placeholder={"Hediye Adı"}
+            label={page.place.giftName}
+            placeholder={page.place.giftName}
             variant="outlined"
             required
             color="error"
-            name="title"
             fullWidth
             value={formData.giftName}
             onChange={(e) =>
@@ -87,7 +88,7 @@ function GiftAddStep({
         </Grid>
         <Grid item xs={4} sm={8} md={12}>
           <TextField
-            label="Hediye Sayısı"
+            label={page.place.giftCount}
             fullWidth
             type="number"
             required
