@@ -14,7 +14,9 @@
       "description": "Add the participants and complete the draw. We will generate random pairings for you and send you the participant for whom you need to receive a gift to your email address. Happy New Year in advance! ✨"
     },
     "gift": {
-      "title": "Gift Raffle"
+      "title": "Gift Raffle",
+      "slogan": "The most beautiful way to further enrich the special moments in life is to touch our loved ones with surprise gifts. Exchanging gifts not only strengthens emotional bonds but also remains one of the sweetest ways to share love. 🌟 🎉",
+      "description": "First, add the gifts and then the participants, and complete the draw. We will make random selections for you and notify the lucky participants by email about the gift they have won. Wishing everyone the best of luck in advance. ✨"
     },
     "place": {
       "startRaffle": "Start Raffle",
@@ -47,6 +49,7 @@
       "maximumParticipant": "The number of participants cannot exceed 500",
       "somethingWentWrong": "Something went wrong",
       "checkAndCompleteRaffle": "Check your participant list and complete the raffle. 🎅🏻",
+      "checkAndCompleteGiftRaffle": "Check your participant and gift list and complete the raffle. ✨",
       "confidentialityAgreement": "Confidentiality Agreement",
       "userAgreement": "User Agreement",
       "readAndAccept": "I have read and accept.",
@@ -57,7 +60,9 @@
       "minimumGifts": "Add at least 1 gifts.",
       "giftName": "Gift Name",
       "giftCount": "Gift Count",
-      "addGifts": "Add Gifts"
+      "addGifts": "Add Gifts",
+      "clickShowParticipantTable": "Click to show or hide participant table below",
+      "clickShowGiftTable": "Click to show or hide gift table below"
     },
     "button": {
       "back": "Back",

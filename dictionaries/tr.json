@@ -10,11 +10,13 @@
   "page": {
     "noel": {
       "title": "Yılbası Çekilisi",
-      "slogan": "Yeni yıl, taptaze bir başlangıçtır. Geçmişi geride bırakıp yeni umutlarla dolu yarına adım atma vakti gelmiştir. İleriye umutla bakın, hayatın güzelliklerini keşfedin ve sevdiklerinizle paylaşın. Yeni yılsize mutluluk, sağlık ve başarı getirsin! 🌟 🎉",
+      "slogan": "Yeni yıl, taptaze bir başlangıçtır. Geçmişi geride bırakıp yeni umutlarla dolu yarına adım atma vakti gelmiştir. İleriye umutla bakın, hayatın güzelliklerini keşfedin ve sevdiklerinizle paylaşın. Yeni yıl size mutluluk, sağlık ve başarı getirsin! 🌟 🎉",
       "description": "Katılımcıları ekleyin ve çekilişi tamamlayın. Sizin için rastgele eşleşmeler yapıp e-posta adresinize hediye almanız gereken katılımcıyı gönderelim. Şimdiden mutlu yıllar. ✨"
     },
     "gift": {
-      "title": "Hediye Çekilisi"
+      "title": "Hediye Çekilisi",
+      "slogan": "Hayatın içindeki özel anları daha da renklendirmenin en güzel yolu, sevdiklerimize sürpriz hediyelerle dokunmaktır. Hediyeleşmek, duygusal bağları güçlendirirken aynı zamanda sevgiyi paylaşmanın en tatlı yollarından biridir. 🌟 🎉",
+      "description": "Önce hediyeleri sonra katılımcıları ekleyin ve çekilişi tamamlayın. Sizin için rastgele seçimler yapıp şanslı katılımcılara e-posta göndererek kazandıkları hediyeyi bildirelim. Şimdiden herkese bol şans. ✨"
     },
     "place": {
       "startRaffle": "Çekilişi Başlat",
@@ -47,6 +49,7 @@
       "maximumParticipant": "Katılımcı sayısı 500'ü geçemez",
       "somethingWentWrong": "Bir hata oluştu",
       "checkAndCompleteRaffle": "Katılımcı listenizi kontrol edin ve çekilişi yapın. 🎅🏻",
+      "checkAndCompleteGiftRaffle": "Katılımcı ve hediye listenizi kontrol edin ve çekilişi yapın. 🎅🏻",
       "confidentialityAgreement": "Gizlilik Sözleşmesi",
       "userAgreement": "Kullanıcı Sözleşmesi",
       "readAndAccept": "okudum ve kabul ediyorum.",
@@ -57,7 +60,9 @@
       "minimumGifts": "En az 1 hediye ekleyin.",
       "giftName": "Hediye Adı",
       "giftCount": "Hediye Sayısı",
-      "addGifts": "Hediyeleri Ekle"
+      "addGifts": "Hediyeleri Ekle",
+      "clickShowParticipantTable": "Katılımcılar tablosunu görmek veya gizlemek için tıklayın.",
+      "clickShowGiftTable": "Hediyeler tablosunu görmek veya gizlemek için tıklayın."
     },
     "button": {
       "back": "Geri",

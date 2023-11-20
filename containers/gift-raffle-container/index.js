@@ -14,8 +14,8 @@ function GiftRaffleContainer({ page }) {
         <h1 className={`${font.className} ${styles.title}`}>
           {page.gift.title}
         </h1>
-        <h2 className={styles.slogan}>{page.noel.slogan}</h2>
-        <div className={styles.desc}>{page.noel.description}</div>
+        <h2 className={styles.slogan}>{page.gift.slogan}</h2>
+        <div className={styles.desc}>{page.gift.description}</div>
       </div>
       <div className={styles.box}>
         <div className={styles.raffle}>
