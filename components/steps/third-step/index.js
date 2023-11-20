@@ -45,6 +45,12 @@ function ThirdStep({
       setCheckedBox(false);
       setCheckedBoxDisabled(true);
     }
+    if (withGiftEdit) {
+      if (raffleData.gifts.length < 1) {
+        setCheckedBox(false);
+        setCheckedBoxDisabled(true);
+      }
+    }
   }, [raffleData]);
 
   const submitRaffle = async (e) => {
@@ -212,6 +218,11 @@ function ThirdStep({
       {raffleData.participants.length < 3 && (
         <Grid item xs={4} sm={8} md={12}>
           <Alert severity="error">{page.place.minimumParticipants}</Alert>
+        </Grid>
+      )}
+      {withGiftEdit && raffleData.gifts.length < 1 && (
+        <Grid item xs={4} sm={8} md={12}>
+          <Alert severity="error">{page.place.minimumGifts}</Alert>
         </Grid>
       )}
       <Grid item xs={4} sm={8} md={12} width={"100%"}>
