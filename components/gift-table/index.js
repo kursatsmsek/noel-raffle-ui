@@ -16,8 +16,8 @@ function Row({ gift, raffleData, setRaffleData, page }) {
 
   const [formData, setFormData] = useState({
     giftId: gift.giftId,
-    giftName: gift.giftName,
-    giftCount: gift.giftCount,
+    name: gift.name,
+    count: gift.count,
   });
 
   function editGift(e) {
@@ -60,8 +60,8 @@ function Row({ gift, raffleData, setRaffleData, page }) {
           </IconButton>
         </TableCell>
 
-        <TableCell>{gift.giftName}</TableCell>
-        <TableCell>{gift.giftCount}</TableCell>
+        <TableCell>{gift.name}</TableCell>
+        <TableCell>{gift.count}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={4}>
@@ -88,9 +88,9 @@ function Row({ gift, raffleData, setRaffleData, page }) {
                     name="name"
                     required
                     fullWidth
-                    value={formData.giftName}
+                    value={formData.name}
                     onChange={(e) =>
-                      setFormData({ ...formData, giftName: e.target.value })
+                      setFormData({ ...formData, name: e.target.value })
                     }
                   />
                 </Grid>
@@ -105,9 +105,9 @@ function Row({ gift, raffleData, setRaffleData, page }) {
                     type="number"
                     required
                     fullWidth
-                    value={formData.giftCount}
+                    value={formData.count}
                     onChange={(e) =>
-                      setFormData({ ...formData, giftCount: e.target.value })
+                      setFormData({ ...formData, count: e.target.value })
                     }
                   />
                 </Grid>

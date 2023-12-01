@@ -13,7 +13,7 @@ import {
 import UserTable from "@/components/user-table";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { completeNoelRaffle } from "@/util/apiCalls";
+import { completeGiftRaffle, completeNoelRaffle } from "@/util/apiCalls";
 import GiftTable from "@/components/gift-table";
 
 function ThirdStep({
@@ -62,7 +62,12 @@ function ThirdStep({
         return;
       }
       raffleData.participants.forEach((participant) => delete participant.id);
-      const res = await completeNoelRaffle(lang, raffleData);
+      let res = undefined;
+      if (withGiftEdit) {
+        res = await completeGiftRaffle(lang, raffleData);
+      } else {
+        res = await completeNoelRaffle(lang, raffleData);
+      }
 
       if (res.ok) {
         setErrorMessageShow(false);

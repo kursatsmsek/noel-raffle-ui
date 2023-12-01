@@ -1,17 +1,8 @@
 "use client";
-import {
-  Alert,
-  Box,
-  Button,
-  Grid,
-  InputAdornment,
-  TextField,
-} from "@mui/material";
+import { Alert, Box, Button, Grid, TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { v4 as uuidv4 } from "uuid";
-import { isEmailAvailable } from "@/util";
-import { NumberInput } from "@mui/base/Unstable_NumberInput/NumberInput";
 
 function GiftAddStep({
   raffleData,
@@ -22,8 +13,8 @@ function GiftAddStep({
 }) {
   const emptyFormData = {
     giftId: "",
-    giftName: "",
-    giftCount: 1,
+    name: "",
+    count: 1,
   };
 
   const [formData, setFormData] = useState(emptyFormData);
@@ -36,7 +27,7 @@ function GiftAddStep({
 
   const submitUser = (e) => {
     e.preventDefault();
-    if (formData.giftCount < 1) {
+    if (formData.count < 1) {
       setFeedback(page.place.minimumGiftCount);
       setErrorMessageShow(true);
       return;
@@ -47,7 +38,7 @@ function GiftAddStep({
     setRaffleData((prevData) => {
       return { ...prevData, gifts: gifts };
     });
-    setLastAdded(formData.giftName);
+    setLastAdded(formData.name);
     setFormData(emptyFormData);
   };
 
@@ -85,10 +76,8 @@ function GiftAddStep({
             required
             color="error"
             fullWidth
-            value={formData.giftName}
-            onChange={(e) =>
-              setFormData({ ...formData, giftName: e.target.value })
-            }
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
         </Grid>
         <Grid item xs={4} sm={8} md={12}>
@@ -98,9 +87,9 @@ function GiftAddStep({
             type="number"
             required
             variant="outlined"
-            value={formData.giftCount}
+            value={formData.count}
             onChange={(e) =>
-              setFormData({ ...formData, giftCount: e.target.value })
+              setFormData({ ...formData, count: e.target.value })
             }
           />
         </Grid>
