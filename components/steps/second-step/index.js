@@ -32,7 +32,7 @@ function SecondStep({
     if (isEmailAvailable(userData.email, raffleData.participants)) {
       e.preventDefault();
 
-      userData.id = uuidv4();
+      userData.userId = uuidv4();
       let users = raffleData.participants || [];
       users.push(userData);
       setRaffleData((prevData) => {

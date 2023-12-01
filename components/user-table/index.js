@@ -15,7 +15,7 @@ function Row({ user, raffleData, setRaffleData, page }) {
   const [open, setOpen] = useState(false);
 
   const [userData, setUserData] = useState({
-    id: user.id,
+    userId: user.userId,
     name: user.name,
     surname: user.surname,
     email: user.email,
@@ -25,12 +25,14 @@ function Row({ user, raffleData, setRaffleData, page }) {
     e.preventDefault();
 
     let users = raffleData.participants;
+    console.log("d users => ", users);
     const updatedUsers = users.map((participant) => {
-      if (participant.id === userData.id) {
+      if (participant.userId === userData.userId) {
         return { ...participant, ...userData };
       }
       return participant;
     });
+    console.log("d updatedUsers => ", updatedUsers);
 
     setRaffleData((prevData) => {
       return { ...prevData, participants: updatedUsers };
@@ -40,7 +42,7 @@ function Row({ user, raffleData, setRaffleData, page }) {
   function deleteUser() {
     let users = raffleData.participants;
     const updatedUsers = users.filter(
-      (participant) => participant.id !== userData.id
+      (participant) => participant.userId !== userData.userId
     );
 
     setRaffleData((prevData) => {
@@ -179,7 +181,7 @@ function UserTable({ raffleData, setRaffleData, page }) {
           <TableBody>
             {raffleData.participants?.map((user) => (
               <Row
-                key={user.id}
+                key={user.userId}
                 user={user}
                 raffleData={raffleData}
                 setRaffleData={setRaffleData}

@@ -61,7 +61,7 @@ function ThirdStep({
         setErrorMessageShow(true);
         return;
       }
-      raffleData.participants.forEach((participant) => delete participant.id);
+      // raffleData.participants.forEach((participant) => delete participant.id);
       let res = undefined;
       if (withGiftEdit) {
         res = await completeGiftRaffle(lang, raffleData);
