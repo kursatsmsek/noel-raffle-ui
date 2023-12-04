@@ -19,7 +19,7 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={params.lang}>
       <body className={inter.className}>
-        <Navbar lang={params.lang} isGiftRaffle={false} />
+        <Navbar lang={params.lang} currentPage={"noel"} />
         <main>{children}</main>
       </body>
     </html>
