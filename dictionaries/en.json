@@ -2,7 +2,7 @@
   "navigation": {
     "noelRaffle": "Noel Raffle",
     "giftRaffle": "Gift Raffle",
-    "sponsors": "Sponsors",
+    "sponsors": "Sponsor",
     "statistics": "Site Statistics",
     "home": "Home",
     "about": "About"
@@ -69,7 +69,14 @@
       "participantCount": "Participant Count",
       "givenGiftCount": "Given Gift Count",
       "totalRaffleCount": "Total Raffle Count",
-      "untilNow": "Until Now Total"
+      "untilNow": "Until Now Total",
+      "projectTitle": "Our Code is Free, Our Love is Infinite!",
+      "projectDescription": "The codes of this platform are open source, and you can contribute to the development of the project. The technologies used are listed below.",
+      "clickProjectSite": "Please click to visit the project page.",
+      "projectTechStack": "Tech Stack: Next.js, Material UI, Java, Spring Boot, Spring Data, MySQL, RabbitMq, etc.",
+      "aboutDeveloper": "About the Developer",
+      "kursatsimsek": "Kursat Simsek | Full-Stack Developer - Detaysoft",
+      "clickCoffeeLink": "Click here to buy coffee for the developer."
     },
     "button": {
       "back": "Back",

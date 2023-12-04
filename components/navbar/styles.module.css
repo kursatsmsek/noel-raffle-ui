@@ -29,6 +29,7 @@
   font-weight: bold;
   display: flex;
   align-items: center;
+  max-height: 5%;
 }
 
 .hamburgerMenu {

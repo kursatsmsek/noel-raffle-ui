@@ -2,7 +2,7 @@
   "navigation": {
     "noelRaffle": "Yılbaşı Çekilişi",
     "giftRaffle": "Hediye Çekilişi",
-    "sponsors": "Sponsorlar",
+    "sponsors": "Katkıda Bulun",
     "statistics": "Site Verileri",
     "home": "Ana Sayfa",
     "about": "Hakkında"
@@ -69,7 +69,14 @@
       "participantCount": "Katılan Kişi",
       "givenGiftCount": "Verilen Hediye",
       "totalRaffleCount": "Çekiliş",
-      "untilNow": "Şimdiye Kadar Toplam"
+      "untilNow": "Şimdiye Kadar Toplam",
+      "projectTitle": "Kodlarımız Özgür, Sevgimiz Sonsuz!",
+      "projectDescription": "Bu platformun kodları açık kaynaklıdır ve siz de projenin gelişimine katkıda bulunabilirsiniz. Kullanılan teknolojiler aşağıda belirtilmiştir.",
+      "clickProjectSite": "Proje sayfasına gitmek için lütfen tıklayın.",
+      "projectTechStack": "Teknolojiler: Next.js, Material UI, Java, Spring Boot, Spring Data, MySQL, RabbitMq vs.",
+      "aboutDeveloper": "Geliştirici Hakkında",
+      "kursatsimsek": "Kürşat Şimşek | Full-Stack Developer - Detaysoft",
+      "clickCoffeeLink": "Geliştiriciye kahve ısmarlamak için tıklayın."
     },
     "button": {
       "back": "Geri",

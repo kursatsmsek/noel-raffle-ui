@@ -23,10 +23,8 @@ export default function LocaleSwitcher({ lang }) {
       style={{ backgroundColor: "rgb(249, 117, 94)" }}
       className={styles.linkButton}
     >
-      <IoLanguageSharp />
-      <div style={{ marginLeft: "8px" }}>
-        {lang === "tr" ? "English" : "Türkçe"}
-      </div>
+      <IoLanguageSharp style={{ marginRight: "0.5rem" }} />
+      {lang === "tr" ? "English" : "Türkçe"}
     </Link>
   );
 }

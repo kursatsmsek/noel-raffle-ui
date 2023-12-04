@@ -1,0 +1,42 @@
+.infoContainer {
+  background-color: #e4686a;
+  max-width: 54%;
+  border-radius: 10px;
+  display: flex;
+  padding: 1%;
+}
+
+.projectDesc {
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.developerLinks {
+  display: flex;
+}
+
+.developerLinks > * {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.infoLeftContent {
+  margin: 1%;
+}
+
+.infoLeftContent > * {
+  margin: 2%;
+}
+
+.infoRightContent {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .infoContainer {
+    max-width: 94%;
+  }
+}

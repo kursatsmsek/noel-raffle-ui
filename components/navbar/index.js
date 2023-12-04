@@ -4,10 +4,11 @@ import Logo from "@/assets/logo3.png";
 import Image from "next/image";
 import TemporaryDrawer from "../drawer";
 import { getDictionary } from "@/lib/dictionary";
-import { GrLanguage } from "react-icons/gr";
-import { IoLanguageSharp } from "react-icons/io5";
-import { usePathname } from "next/navigation";
 import LocaleSwitcher from "./locale-switcher";
+import { FaGithub } from "react-icons/fa";
+import { IoStatsChart } from "react-icons/io5";
+import { FaGift } from "react-icons/fa6";
+import { TbChristmasTree } from "react-icons/tb";
 
 async function Navbar({ lang, currentPage }) {
   const { navigation } = await getDictionary(lang);
@@ -24,6 +25,7 @@ async function Navbar({ lang, currentPage }) {
           style={{ display: `${currentPage === "noel" && "none"}` }}
         >
           {navigation.noelRaffle}
+          <TbChristmasTree style={{ marginLeft: "0.5rem" }} />
         </Link>
 
         <Link
@@ -32,10 +34,16 @@ async function Navbar({ lang, currentPage }) {
           style={{ display: `${currentPage === "gift" && "none"}` }}
         >
           {navigation.giftRaffle}
+          <FaGift style={{ marginLeft: "0.5rem" }} />
         </Link>
 
-        <Link href="/login" className={styles.linkButton}>
+        <Link
+          href={`/${lang}/sponsor`}
+          className={styles.linkButton}
+          style={{ display: `${currentPage === "sponsor" && "none"}` }}
+        >
           {navigation.sponsors}
+          <FaGithub style={{ marginLeft: "0.5rem" }} />
         </Link>
         <Link
           href={`/${lang}/stats`}
@@ -43,6 +51,7 @@ async function Navbar({ lang, currentPage }) {
           style={{ display: `${currentPage === "stats" && "none"}` }}
         >
           {navigation.statistics}
+          <IoStatsChart style={{ marginLeft: "0.5rem" }} />
         </Link>
         <LocaleSwitcher lang={lang} />
       </div>
