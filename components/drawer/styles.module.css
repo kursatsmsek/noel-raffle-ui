@@ -8,6 +8,15 @@
   font-weight: bold;
 }
 
+.menuItems {
+  width: 60%;
+}
+
+.menuItems > * {
+  width: 100%;
+  margin: 2%;
+}
+
 .sockImage {
   display: flex;
   align-items: center;

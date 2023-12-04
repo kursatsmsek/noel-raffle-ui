@@ -46,6 +46,7 @@ function SponsorContainer({ page }) {
                 }}
               >
                 <Link
+                  target="_blank"
                   href={process.env.NEXT_PUBLIC_GITHUB_URL}
                   style={{ color: "#bbf0ff" }}
                 >

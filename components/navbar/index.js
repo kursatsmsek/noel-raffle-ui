@@ -56,7 +56,11 @@ async function Navbar({ lang, currentPage }) {
         <LocaleSwitcher lang={lang} />
       </div>
       <div className={styles.hamburgerMenu}>
-        <TemporaryDrawer lang={lang} />
+        <TemporaryDrawer
+          navigation={navigation}
+          lang={lang}
+          currentPage={currentPage}
+        />
       </div>
     </header>
   );
