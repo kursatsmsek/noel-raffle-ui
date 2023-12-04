@@ -33,6 +33,11 @@
   }
 }
 
+.statBoxUntilNow {
+  font-size: x-small;
+  font-style: italic;
+}
+
 .statBoxIcon {
   animation: down 1s ease-out;
   margin: 1rem;

@@ -19,3 +19,13 @@ export const completeGiftRaffle = async (lang, data) => {
     body: JSON.stringify(data),
   });
 };
+
+export const getStats = async (lang, data) => {
+  return await fetch(`${process.env.NEXT_PUBLIC_SERVICE_URL}/stats/`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept-Language": lang,
+    },
+  });
+};

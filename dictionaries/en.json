@@ -63,7 +63,13 @@
       "giftCount": "Gift Count",
       "addGifts": "Add Gifts",
       "clickShowParticipantTable": "Click to show or hide participant table below",
-      "clickShowGiftTable": "Click to show or hide gift table below"
+      "clickShowGiftTable": "Click to show or hide gift table below",
+      "noelRaffleCount": "Noel Raffle Count",
+      "giftRaffleCount": "Gift Raffle Count",
+      "participantCount": "Participant Count",
+      "givenGiftCount": "Given Gift Count",
+      "totalRaffleCount": "Total Raffle Count",
+      "untilNow": "Until Now Total"
     },
     "button": {
       "back": "Back",

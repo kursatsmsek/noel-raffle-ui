@@ -63,7 +63,13 @@
       "giftCount": "Hediye Sayısı",
       "addGifts": "Hediyeleri Ekle",
       "clickShowParticipantTable": "Katılımcılar tablosunu görmek veya gizlemek için tıklayın.",
-      "clickShowGiftTable": "Hediyeler tablosunu görmek veya gizlemek için tıklayın."
+      "clickShowGiftTable": "Hediyeler tablosunu görmek veya gizlemek için tıklayın.",
+      "noelRaffleCount": "Yılbaşı Çekilişi",
+      "giftRaffleCount": "Hediye Çekilişi",
+      "participantCount": "Katılan Kişi",
+      "givenGiftCount": "Verilen Hediye",
+      "totalRaffleCount": "Çekiliş",
+      "untilNow": "Şimdiye Kadar Toplam"
     },
     "button": {
       "back": "Geri",
