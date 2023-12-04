@@ -2,7 +2,7 @@
 import styles from "./styles.module.css";
 import { Mountains_of_Christmas } from "next/font/google";
 import StatBox from "@/components/stat-box";
-import { Grid, Skeleton } from "@mui/material";
+import { Alert, Grid, Skeleton, Snackbar } from "@mui/material";
 import SnowMan from "@/assets/logo2.png";
 import Cookie from "@/assets/cookie.png";
 import GiftHand from "@/assets/gift-hand.png";
@@ -14,6 +14,8 @@ import { getStats } from "@/util/apiCalls";
 const font = Mountains_of_Christmas({ subsets: ["latin"], weight: "700" });
 
 function StatsContainer({ page }) {
+  const [sWWOpen, setSWWOpen] = useState(false);
+
   const [data, setData] = useState({
     noelRaffleCount: 0,
     giftRaffleCount: 0,
@@ -27,10 +29,18 @@ function StatsContainer({ page }) {
   }, []);
 
   const getStatsData = async () => {
-    const response = await getStats();
-    if (response.ok) {
-      const responseData = await response.json();
-      setData(responseData);
+    try {
+      const response = await getStats();
+      if (response.ok) {
+        const responseData = await response.json();
+        setData(responseData);
+      } else {
+        const responseText = await res.text();
+        setSWWOpen(true);
+      }
+    } catch (error) {
+      console.error(page.place.somethingWentWrong, error);
+      setSWWOpen(true);
     }
   };
 
@@ -155,6 +165,20 @@ function StatsContainer({ page }) {
           page={page}
         />
       </Grid>
+      <Snackbar
+        open={sWWOpen}
+        autoHideDuration={2000}
+        onClose={() => setSWWOpen(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setSWWOpen(false)}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          {page.place.somethingWentWrong}
+        </Alert>
+      </Snackbar>
     </Grid>
   );
 }
