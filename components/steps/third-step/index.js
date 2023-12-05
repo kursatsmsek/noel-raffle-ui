@@ -167,8 +167,14 @@ function ThirdStep({
             onChange={(e) => setCheckedBox(e.target.checked)}
           />
           <span>
-            <Link href={"#"}>{page.place.confidentialityAgreement} </Link> -
-            <Link href={"#"}> {page.place.userAgreement} </Link>{" "}
+            <Link target="_blank" href={"/agreement/privacy-agreement"}>
+              {page.place.confidentialityAgreement}{" "}
+            </Link>{" "}
+            -
+            <Link target="_blank" href={"/agreement/user-agreement"}>
+              {" "}
+              {page.place.userAgreement}{" "}
+            </Link>{" "}
             {page.place.readAndAccept}
           </span>
         </div>

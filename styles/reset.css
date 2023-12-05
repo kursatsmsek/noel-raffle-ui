@@ -40,6 +40,7 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
+  font-size: small;
 }
 button {
   background: none;
