@@ -25,14 +25,12 @@ function Row({ user, raffleData, setRaffleData, page }) {
     e.preventDefault();
 
     let users = raffleData.participants;
-    console.log("d users => ", users);
     const updatedUsers = users.map((participant) => {
       if (participant.userId === userData.userId) {
         return { ...participant, ...userData };
       }
       return participant;
     });
-    console.log("d updatedUsers => ", updatedUsers);
 
     setRaffleData((prevData) => {
       return { ...prevData, participants: updatedUsers };

@@ -28,10 +28,6 @@ function GiftRaffleStepper({ page }) {
     gifts: "",
   });
 
-  useEffect(() => {
-    console.log("GiftRaffle Data => ", raffleData);
-  }, [raffleData]);
-
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };

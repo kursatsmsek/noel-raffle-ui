@@ -25,10 +25,6 @@ function RaffleStepper({ page }) {
     participants: "",
   });
 
-  useEffect(() => {
-    console.log("NoelRaffle Data => ", raffleData);
-  }, [raffleData]);
-
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
