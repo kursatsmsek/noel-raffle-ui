@@ -15,6 +15,8 @@ function getLocale(request) {
 }
 
 export function middleware(request) {
+  if (request.nextUrl.pathname === "/sitemap.xml") return;
+  console.log("reques => ", request.nextUrl.pathname);
   const pathname = request.nextUrl.pathname;
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
