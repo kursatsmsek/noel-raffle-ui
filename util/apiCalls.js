@@ -24,7 +24,7 @@ export const completeGiftRaffle = async (lang, data) => {
 
 export const getStats = async (lang, data) => {
   // return await fetch(`${process.env.NEXT_PUBLIC_SERVICE_URL}/stats/`, {
-  return await fetch(`api/stats/`, {
+  return await fetch(`https://noelraffle.com/api/stats/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
