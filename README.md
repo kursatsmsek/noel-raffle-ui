@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Backend Repository is https://github.com/kursatsmsek/noel-raffle-service
 
-## Getting Started
+🎉 Hello! 🎁
 
-First, run the development server:
+Are you ready to elevate the New Year spirit to the next level? I've developed a raffle website and I'm excited to share it with you: noelraffle.com!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🌟 Noel Raffle - New Year's Drawing:
+In the first section of the site, experience the New Year's joy with your friends through Noel Raffle! Just enter your names and email addresses, and the site will randomly pair each user with another for an exchange of gifts. You'll receive an email indicating to whom you should give a gift. Let's all surprise each other with gifts – it's that simple!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎁 Gift Raffle:
+In the second section of our site, Gift Raffle is here to facilitate your gift exchange! Here, lucky individuals randomly chosen from the number of participants you specify will be deemed worthy of one of the gifts you've determined. In this draw where everyone has an equal chance, winners will be notified of their prize via email!
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🚀 Tech Stack:
+Behind this fantastic experience are powerful and reliable technologies:
+Next.js,
+Material UI,
+Java - Spring Boot,
+Mail Sender,
+RabbitMQ,
+MySQL
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+🌐 Multilingual Support:
+noelraffle.com is at your service with Turkish and English language options.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🔍 Open Source Code:
+The site's code is open source and available on https://lnkd.in/dwsY7Chj! If you want to contribute or review the code, you can access it through the GitHub repository.
